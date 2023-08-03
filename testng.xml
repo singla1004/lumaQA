@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+     
+      <class name="testCases.testLogOut"/>
+      <class name="testCases.testSalePage"/>
+     <class name="testCases.testSelectWomenJacket"/>
+      <class name="testCases.testSignUpPage"/>
+       <class name="testCases.verifyCountOfJacket"/>
+       <class name="testCases.verifyLogInPage"/>
+        <class name="testCases.verifyMyAccount"/>
+        <class name="testCases.verifySearchItem"/>
+      
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
