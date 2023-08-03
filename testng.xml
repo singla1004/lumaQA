@@ -3,15 +3,14 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-     
-      <class name="testCases.testLogOut"/>
-      <class name="testCases.testSalePage"/>
-     <class name="testCases.testSelectWomenJacket"/>
-      <class name="testCases.testSignUpPage"/>
-       <class name="testCases.verifyCountOfJacket"/>
-       <class name="testCases.verifyLogInPage"/>
+    
+    
+      <class name="testCases.verifyLogInPage"/>
         <class name="testCases.verifyMyAccount"/>
         <class name="testCases.verifySearchItem"/>
+        <class name="testCases.testLogOut"/>
+      
+     
       
       
     </classes>
