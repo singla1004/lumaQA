@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-04T18:00:10 IST" name="Suite" finished-at="2023-08-04T18:01:06 IST" duration-ms="55843">
+    <groups>
+    </groups>
+    <test started-at="2023-08-04T18:00:10 IST" name="Test" finished-at="2023-08-04T18:01:06 IST" duration-ms="55843">
+      <class name="testCases.verifyLogInPage">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.verifyLogInPage@93081b6]" started-at="2023-08-04T18:00:10 IST" name="setup" finished-at="2023-08-04T18:00:17 IST" duration-ms="7415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_Log_Out()[pri:0, instance:testCases.verifyLogInPage@93081b6]" started-at="2023-08-04T18:00:17 IST" name="test_Log_Out" finished-at="2023-08-04T18:00:23 IST" duration-ms="5803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Log_Out -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:testCases.verifyLogInPage@93081b6]" started-at="2023-08-04T18:00:23 IST" name="endTest" finished-at="2023-08-04T18:00:24 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- testCases.verifyLogInPage -->
+      <class name="testCases.verifySearchItem">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.verifySearchItem@7c3fdb62]" started-at="2023-08-04T18:00:38 IST" name="setup" finished-at="2023-08-04T18:00:44 IST" duration-ms="5288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySearch()[pri:0, instance:testCases.verifySearchItem@7c3fdb62]" started-at="2023-08-04T18:00:44 IST" name="verifySearch" finished-at="2023-08-04T18:00:49 IST" duration-ms="5794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearch -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:testCases.verifySearchItem@7c3fdb62]" started-at="2023-08-04T18:00:49 IST" name="endTest" finished-at="2023-08-04T18:00:50 IST" duration-ms="374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- testCases.verifySearchItem -->
+      <class name="testCases.testLogOut">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.testLogOut@205d38da]" started-at="2023-08-04T18:00:50 IST" name="setup" finished-at="2023-08-04T18:00:55 IST" duration-ms="4813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_Log_Out()[pri:0, instance:testCases.testLogOut@205d38da]" started-at="2023-08-04T18:00:55 IST" name="test_Log_Out" finished-at="2023-08-04T18:01:06 IST" duration-ms="10897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Log_Out -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:testCases.testLogOut@205d38da]" started-at="2023-08-04T18:01:06 IST" name="endTest" finished-at="2023-08-04T18:01:06 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- testCases.testLogOut -->
+      <class name="testCases.verifyMyAccount">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.verifyMyAccount@3336e6b6]" started-at="2023-08-04T18:00:24 IST" name="setup" finished-at="2023-08-04T18:00:27 IST" duration-ms="3886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyTitleOfMyAccount()[pri:0, instance:testCases.verifyMyAccount@3336e6b6]" started-at="2023-08-04T18:00:27 IST" name="verifyTitleOfMyAccount" finished-at="2023-08-04T18:00:38 IST" duration-ms="10758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitleOfMyAccount -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:testCases.verifyMyAccount@3336e6b6]" started-at="2023-08-04T18:00:38 IST" name="endTest" finished-at="2023-08-04T18:00:38 IST" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- testCases.verifyMyAccount -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

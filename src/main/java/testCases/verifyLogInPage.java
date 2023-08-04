@@ -4,18 +4,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.AssertJUnit;
+
 import java.io.IOException;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import com.Base.BaseTest;
 
@@ -31,15 +22,15 @@ loginPage objLoginIn;
 		startReport("Test Log In Page");
 		openBrowser("BrowserName");
 		
-		logINFO("Launching browser");
+		//logINFO("Launching browser");
 			navigate("AppURL");
 			maximize();
-			CaptureScreen();
+			//CaptureScreen();
 			implicitWait("IWait");
 		}catch(Exception e)
 		{
 			reportFailException(e);
-			CaptureScreen();
+			//CaptureScreen();
 			reportClose();
 			
 		}
@@ -47,27 +38,28 @@ loginPage objLoginIn;
 	}
 	
 	
-	@Test(priority=7)
+	@Test
 	public void test_Log_Out() throws Exception
 	{
 
 		try {
 		objLoginIn= new loginPage(driver);
 		objLoginIn.LogIn(getPropValue("Email"), getPropValue("Password"));   
-		logINFO("Entered Email and Password for Login");
+		//logINFO("Entered Email and Password for Login");
 		String title=getElement("login_Welcome_text_xpath").getText();
 		AssertJUnit.assertTrue(title.contains("Welcome, Mohit Kumar!"));
-		logINFO("User name matched");
-		CaptureScreen();
-		logINFO("Test case passed. User logged in successfully");
+		//logINFO("User name matched");
+		//CaptureScreen();
+		//logINFO("Test case passed. User logged in successfully");
+		System.out.println("Test case passed. User logged in successfully");
 		reportClose();
-		closeBrowser();
+		
 		}catch(Exception e)
 		{
 			reportFailException(e);
-			CaptureScreen();
+			//CaptureScreen();
 			reportClose();
-			closeBrowser();
+			//closeBrowser();
 		}
 		
 

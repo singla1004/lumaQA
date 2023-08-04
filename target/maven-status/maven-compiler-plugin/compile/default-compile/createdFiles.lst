@@ -1,0 +1,13 @@
+pages\salePage.class
+pages\signUpPage.class
+pages\myAccountPage.class
+testCases\verifySearchItem.class
+com\Util\ExtentManager.class
+pages\searchItem.class
+com\Base\BaseTest.class
+pages\loginPage.class
+testCases\testLogOut.class
+testCases\verifyMyAccount.class
+testCases\verifyLogInPage.class
+com\luma\LUMA\SimpleService.class
+pages\womenJacketPage.class
