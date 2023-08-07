@@ -38,7 +38,7 @@ public class testLogOut extends BaseTest {
 	public void test_Log_Out() throws Exception
 	{
 
-		try {
+		
 		objLoginIn= new loginPage(driver);
 		objLoginIn.LogIn(getPropValue("Email"), getPropValue("Password"));   
 		//logINFO("Entered Email and Password for Login");
@@ -55,14 +55,9 @@ public class testLogOut extends BaseTest {
 	    reportClose();
 	    
 	    
-	}catch(Exception e)
-	{
-		reportFailException(e);
-		//CaptureScreen();
-		reportClose();
-		//closeBrowser();
 	}
-	}
+
+	
 		@AfterClass
 		public void endTest()
 		{

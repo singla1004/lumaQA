@@ -38,8 +38,7 @@ public class verifyMyAccount extends BaseTest {
 	@Test
 	public void verifyTitleOfMyAccount() throws Exception{
 		
-		try
-		{
+		
 			objLoginIn= new loginPage(driver);
 		objLoginIn.LogIn(getPropValue("Email"), getPropValue("Password"));  
 		//logINFO("Entered Email and Password for Login");
@@ -57,14 +56,7 @@ public class verifyMyAccount extends BaseTest {
 		reportClose();
 	
 		
-	}catch(Exception e){
-		reportFailException(e);
-		//CaptureScreen();
-		reportClose();
-		//closeBrowser();
-		
-	}
-
+	
 }
 	@AfterClass
 	public void endTest()

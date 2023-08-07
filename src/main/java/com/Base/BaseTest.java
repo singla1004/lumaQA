@@ -45,28 +45,51 @@ public class BaseTest {
 	
 	
 	/*-------------------Generic Function-------------------*/
-	public static String getPropValue(String PName) throws IOException
+	
+	public static String getPropValue(String PName)
 	{
-		
+		String PValue=null;
+		FileInputStream pi = null;
+		try {
 		Properties Prop=new Properties();
 		String dir=System.getProperty("user.dir");
-		FileInputStream pi=new FileInputStream(dir+"\\src\\main\\java\\resources\\config.properties");
+		pi=new FileInputStream(dir+"\\src\\main\\java\\resources\\config.properties");
 		Prop.load(pi);
 		//System.out.println(Prop.getProperty(BName));
-		String PValue=Prop.getProperty(PName);
-		return PValue;
+		PValue = Prop.getProperty(PName);
+		
+		
 
-}
+		}catch(Exception e)
+			{}finally {
+				if(pi != null) {
+					try {
+						pi.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		return PValue;
+		
+	}
+
 	
 	public static String getObjPath(String PName) throws IOException
 	{
-		
 		Properties Prop=new Properties();
 		String dir=System.getProperty("user.dir");
-		FileInputStream pi=new FileInputStream(dir+"\\src\\main\\java\\resources\\ObjPath.properties");
+		String PValue=Prop.getProperty(PName);
+		try (FileInputStream pi = new FileInputStream(dir+"\\src\\main\\java\\resources\\ObjPath.properties")){
+		
 		Prop.load(pi);
 		//System.out.println(Prop.getProperty(BName));
-		String PValue=Prop.getProperty(PName);
+		
+		
+		}catch(Exception e)
+		{
+			
+		}
 		return PValue;
 
 }
@@ -104,26 +127,33 @@ public class BaseTest {
 		}
 		public static void type(String LocatorName, String Value) throws IOException{
 			
+			WebElement loname=getElement(LocatorName);
 			/*String LocatorKey=getObjPath(LocatorName);
 			
 			
 			driver.findElement(By.xpath(LocatorKey)).sendKeys(Value);*/
-			getElement(LocatorName).sendKeys(Value);
+			if(loname !=null) {
+				loname.sendKeys(Value);
 			
-			
+			}
 		}
 		public static void click(String LocatorName) throws IOException
 		{
 			/*String LocatorKey= getObjPath(LocatorName);
 			
 			driver.findElement(By.xpath(LocatorKey)).click();*/
-			getElement(LocatorName).click();
+			WebElement loName=getElement(LocatorName);
+			if(loName !=null) {
+				loName.click();
+			}
 			
 			
 		}
-		public static void wait(int i) throws InterruptedException
+		public static void hardWait(long i) throws InterruptedException
 		{
-			Thread.sleep(i*1000);
+			 Thread.sleep(i*1000);
+			 
+			
 			
 		}
 		public static  void implicitWait(String iTIME) throws IOException
