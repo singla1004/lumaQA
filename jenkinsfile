@@ -25,6 +25,14 @@ pipeline{
             bat "mvn test"
             }
         }
+stage("build & SonarQube analysis") {
+            agent any
+            steps {
+              withSonarQubeEnv('serve-sonar') {
+                sh 'mvn clean package sonar:sonar'
+              }
+            }
+}
         stage("Publish to Artifactory"){
             steps{
                 rtMavenDeployer(
@@ -43,11 +51,7 @@ pipeline{
                 )
             }        
         }
-        stage("Invoke UI Test Pipeline"){
-			steps{
-				build job: 'DevopsTest'
-			}
-		}
+       
     }
     post{
         success{
