@@ -1,0 +1,61 @@
+pipeline{
+    agent any
+    	environment {
+		notifyEmail ="mohit.kumar13@nagarro.com"
+	}
+    tools{
+        maven 'Maven3'
+    }
+    triggers {
+    	cron('0 06 * * *')
+  	}
+    stages{
+        stage("code checkout"){
+            steps{
+            bat "echo hello"
+            }
+        }   
+        stage("code build"){
+            steps{
+            bat "mvn clean"
+            }
+        }
+        stage("unit test"){
+            steps{
+            bat "mvn test"
+            }
+        }
+stage("build & SonarQube analysis") {
+            agent any
+            steps {
+              withSonarQubeEnv('serve-sonar') {
+                bat "mvn clean test sonar:sonar"
+              }
+            }
+}
+        stage("Publish to Artifactory"){
+            steps{
+                rtMavenDeployer(
+                    id: 'deployer',
+                    serverId: 'mohit1004@jfactory',
+                    releaseRepo: 'example-repo-local',
+                    snapshotRepo: 'example-repo-local'
+                )
+                rtMavenRun(
+                    pom: 'pom.xml',
+                    goals: 'clean install',
+                    deployerId: 'deployer'
+                    )
+                rtPublishBuildInfo(
+                    serverId:'mohit1004@jfactory',
+                )
+            }        
+        }
+       
+    }
+    post{
+        success{
+            bat "echo success"
+            }
+        }
+}
